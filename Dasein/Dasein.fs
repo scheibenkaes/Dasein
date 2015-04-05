@@ -1,8 +1,21 @@
-
-module Core
+module Dasein.Core
 
 type Entity = {
-    Id: string
+    Id: string;
+    Components : Map<string,obj>
 }
 
-type bind = Entity -> Entity
+let newEntity id = {Id = id; Components = Map.empty}
+
+let addComponent entity comp =
+    {entity with 
+        Components = Map.add (comp.GetType().ToString())
+                             (comp)
+                             (entity.Components)}
+
+let getComponent<'T> entity : 'T option =
+    let typeName = typeof<'T>.ToString()
+    let comp = entity.Components.TryFind(typeName)
+    match comp with
+    | None -> None
+    | Some c -> Some (c :?> 'T)

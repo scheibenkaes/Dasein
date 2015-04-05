@@ -52,4 +52,10 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dasein\Dasein.fsproj">
+      <Project>{29F348BC-015E-4DC6-BAF2-CA013DACFBBB}</Project>
+      <Name>Dasein</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
