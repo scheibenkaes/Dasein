@@ -3,3 +3,4 @@
 /packages/
 /Dasein.Test/test-results/
 *.nupkg
+/Dasein.userprefs
