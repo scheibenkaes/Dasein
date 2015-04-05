@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Dasein</id>
+    <version>1.0.0.0</version>
+    <title>Dasein - ECS</title>
+    <authors>Benjamin Klueglein</authors>
+    <owners>Benjamin Klueglein</owners>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/scheibenkaes/Dasein</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A small ECS library I tossed together to learn myself some F#.</description>
+    <releaseNotes>Very first version. Nothing to fancy.</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>ECS Entity Component System</tags>
+    <dependencies>
+    	<dependency id="FSharp.Core" version="3.1.2.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin/Release/Dasein.dll" target="lib/net40" />
+  </files>
+</package>

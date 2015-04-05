@@ -45,5 +45,7 @@
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" />
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Dasein.nuspec" />
+    <None Include="License.txt" />
   </ItemGroup>
 </Project>

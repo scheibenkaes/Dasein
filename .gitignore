@@ -2,3 +2,4 @@
 /Dasein.Test/bin/
 /packages/
 /Dasein.Test/test-results/
+*.nupkg
