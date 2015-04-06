@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dasein</id>
-    <version>1.0.1.0</version>
+    <version>1.0.2.0</version>
     <title>Dasein - ECS</title>
     <authors>Benjamin Klueglein</authors>
     <owners>Benjamin Klueglein</owners>
@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/scheibenkaes/Dasein</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A small ECS library I tossed together to learn myself some F#.</description>
-    <releaseNotes>Better usablity due to lessons learned using it.</releaseNotes>
+    <releaseNotes>Better usablity due to lessons learned using it. Now even more convenient!1!</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>ECS Entity Component System</tags>
     <dependencies>

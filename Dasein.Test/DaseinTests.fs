@@ -14,6 +14,18 @@ type FancyComponent = {
 }
 
 [<TestFixture>]
+type public ``getComponentValue acts as expected`` () =
+    let e = newEntity "asd"
+
+    [<Test>]
+    member x.``finds value if it's there`` () =
+        e |> addComponent {Foo = 100} |> getComponentValue<FancyComponent> |> should equal {Foo = 100}
+
+    [<Test>]
+    member x.``throws when it cannot find the component`` () =
+        (fun () -> getComponentValue<Renderable> e |> ignore) |> should throw typeof<System.ArgumentException>
+
+[<TestFixture>]
 type public ``entities can be extended by components`` () =
     let e = {Id = "asd"; Components = Map.empty}
 

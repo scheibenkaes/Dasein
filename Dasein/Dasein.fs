@@ -19,3 +19,6 @@ let getComponent<'T> entity : 'T option =
     match comp with
     | None -> None
     | Some c -> Some (c :?> 'T)
+
+let getComponentValue<'T> entity : 'T =
+    getComponent<'T> entity |> Option.get
