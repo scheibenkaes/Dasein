@@ -9,11 +9,23 @@ type Renderable = {
     text: string
 }
 
+type FancyComponent = {
+    Foo: int
+}
+
 [<TestFixture>]
 type public ``entities can be extended by components`` () =
     let e = {Id = "asd"; Components = Map.empty}
 
-    let renderable = addComponent e {text = "asd"}
+    let renderable = addComponent {text = "asd"} e
+
+    [<Test>]
+    member this.``adding components can be pipelined``() =
+        e
+        |> addComponent {text ="asd"}
+        |> addComponent {Foo = 123}
+        |> getComponent<FancyComponent>
+        |> Option.isSome |> should equal true
 
     [<Test>]
     member this.``newEntity sets up the value as expected`` () = 

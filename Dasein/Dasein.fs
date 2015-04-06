@@ -7,7 +7,7 @@ type Entity = {
 
 let newEntity id = {Id = id; Components = Map.empty}
 
-let addComponent entity comp =
+let addComponent comp entity =
     {entity with 
         Components = Map.add (comp.GetType().ToString())
                              (comp)
